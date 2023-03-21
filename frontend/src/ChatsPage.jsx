@@ -2,7 +2,7 @@
  
 const ChatsPage = (props) => {
     const chatProps = useMultiChatLogic(
-        'd75bd7c1-d3a8-4ad9-8c91-701b3a61bb7f',
+        'YOUR-PROJECT-ID',
         props.user.username,
         props.user.secret
     );
@@ -23,7 +23,7 @@ const ChatsPage = (props) => {
     return (
         <div style={{ height: '100vh'}}>
             <PrettyChatWindow
-                projectId='YOUR-PROJECT-ID'
+                projectId={import.meta.env.VITE_CHAT_ENGINE_PROJECT_ID}
                 username={props.user.username}
                 secret={props.user.secret}
                 style={{ height: '100%'}}
